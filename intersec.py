@@ -19,6 +19,6 @@ def commonElements(listA, listB):
     return new_list
 
 lista1 = [1, 2, 3]
-lista2 = [2, 3, 4, 5, 6, 7, 8, 9]
+lista2 = [i + 1 for i in range(0, 100)]
 result = commonElements(lista1, lista2)
 print(result)
