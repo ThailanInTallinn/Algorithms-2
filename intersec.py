@@ -1,0 +1,21 @@
+from hashtable import Hashtable
+
+def commonElements(listA, listB):
+    largest_list = (listA if len(listA) > len(listB) else listB, listB if len(listA) > len(listB) else listA)
+    new_list:list[int] = []
+    hashtable = Hashtable(len(largest_list[0]))    
+
+    for i in range(0, hashtable.tamanho):
+        hashtable.inserir(largest_list[0][i], largest_list[0][i])
+
+    for i in range(0, len(largest_list[1])):
+        found = hashtable.buscar(largest_list[1][i])     
+        if(found):
+            new_list.append(found)
+    
+    return new_list
+
+lista1 = [1, 2, 3]
+lista2 = [2, 3, 4, 5, 6, 7, 8, 9]
+result = commonElements(lista1, lista2)
+print(result)
