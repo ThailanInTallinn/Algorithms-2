@@ -6,3 +6,4 @@
     alpha.py -> exercício 4
     unico.py -> exercício 5
     selection.py -> exercício 6
+    insertion.py -> exercício 7
