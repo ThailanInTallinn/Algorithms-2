@@ -1,9 +1,9 @@
 def selection_sort(lista):
     new_lista = lista
+    count = 0
 
     for i in range(len(new_lista)):
         min_index = i
-        count = 0
 
         for j in range(i + 1, len(new_lista)):
             count += 1
@@ -14,6 +14,7 @@ def selection_sort(lista):
         new_lista[i] = new_lista[min_index]
         new_lista[min_index] = temp
 
+    print(f"Numero de passos: {count}")
     return new_lista
 
 lista = [3, 2, 1, 4, 5]
